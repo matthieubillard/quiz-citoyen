@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Examen Civique Français — Entraînement & QCM Interactif</title>
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐓</text></svg>">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><style>text{font-size:80px;filter:drop-shadow(0 0 4px rgba(0,0,0,0.55));}@media(prefers-color-scheme:dark){text{filter:drop-shadow(0 0 6px rgba(255,255,255,0.75));}}</style><text y=%22.9em%22 x=%2210%22>🐓</text></svg>">
   <!-- Premium Typography -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -38,6 +38,128 @@
       
       --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
       --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* ==========================================
+       LIGHT THEME OVERRIDES (OS PREFERENCE)
+       ========================================== */
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg-main: #f1f5f9;
+        --bg-card: rgba(255, 255, 255, 0.7);
+        --bg-card-hover: rgba(255, 255, 255, 0.9);
+        --border-color: rgba(15, 23, 42, 0.1);
+        --border-glow: rgba(79, 70, 229, 0.15);
+        
+        --color-primary: #4f46e5;
+        --color-primary-glow: rgba(79, 70, 229, 0.2);
+        --color-success: #059669;
+        --color-success-glow: rgba(5, 150, 105, 0.2);
+        --color-error: #dc2626;
+        --color-error-glow: rgba(220, 38, 38, 0.2);
+        --color-warning: #d97706;
+        
+        --text-main: #0f172a;
+        --text-muted: #475569;
+      }
+      
+      header {
+        background-color: rgba(241, 245, 249, 0.7) !important;
+      }
+      
+      footer {
+        background-color: rgba(241, 245, 249, 0.9) !important;
+      }
+      
+      .logo span {
+        background: linear-gradient(135deg, #4f46e5, #818cf8) !important;
+        -webkit-background-clip: text !important;
+        -webkit-text-fill-color: transparent !important;
+      }
+      
+      .hero h1 span {
+        background: linear-gradient(135deg, #ef4444, #4f46e5, #3b82f6) !important;
+        -webkit-background-clip: text !important;
+        -webkit-text-fill-color: transparent !important;
+      }
+      
+      .progress-bar-bg {
+        background-color: rgba(15, 23, 42, 0.08) !important;
+      }
+      
+      .option-btn {
+        background: rgba(255, 255, 255, 0.5) !important;
+      }
+      
+      .option-btn:hover:not(.disabled) {
+        background-color: rgba(255, 255, 255, 0.95) !important;
+      }
+      
+      .option-btn.correct {
+        background-color: rgba(5, 150, 105, 0.1) !important;
+        color: #065f46 !important;
+      }
+      
+      .option-btn.incorrect {
+        background-color: rgba(220, 38, 38, 0.1) !important;
+        color: #991b1b !important;
+      }
+      
+      .option-btn.selected {
+        background-color: rgba(79, 70, 229, 0.08) !important;
+      }
+      
+      .badge-correct {
+        background-color: var(--color-success) !important;
+        color: white !important;
+      }
+      
+      .badge-incorrect {
+        background-color: var(--color-error) !important;
+        color: white !important;
+      }
+      
+      .explanation-card {
+        background: rgba(5, 150, 105, 0.06) !important;
+        border-left-color: var(--color-success) !important;
+      }
+      
+      .explanation-text {
+        color: #065f46 !important;
+      }
+      
+      .card-front {
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(241, 245, 249, 0.95)) !important;
+        border-color: rgba(15, 23, 42, 0.1) !important;
+      }
+      
+      .card-back {
+        background: linear-gradient(135deg, rgba(209, 250, 229, 0.95), rgba(167, 243, 208, 0.95)) !important;
+        border-color: rgba(5, 150, 105, 0.2) !important;
+      }
+      
+      .card-content {
+        color: #0f172a !important;
+      }
+      
+      .select-input {
+        background: rgba(255, 255, 255, 0.9) !important;
+        color: #0f172a !important;
+      }
+      
+      .stats-panel {
+        background: rgba(15, 23, 42, 0.02) !important;
+      }
+      
+      .orb-purple {
+        background: #a855f7 !important;
+        opacity: 0.06 !important;
+      }
+      
+      .orb-blue {
+        background: #3b82f6 !important;
+        opacity: 0.06 !important;
+      }
     }
     
     * {
